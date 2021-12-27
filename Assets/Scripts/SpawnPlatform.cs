@@ -17,7 +17,7 @@ public class SpawnPlatform : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         for (int i = 0; i < Platforms.Count; i++) {
-            Transform p = Instantiate(Platforms[i], new Vector2(i * 30, 0f), transform.rotation).transform;
+            Transform p = Instantiate(Platforms[i], new Vector2(i * 30, -4.48f), transform.rotation).transform;
             currentPlatforms.Add(p);
             offset += 30;
         }
@@ -43,7 +43,7 @@ public class SpawnPlatform : MonoBehaviour {
     }
 
     public void Recycle(GameObject platform) {
-        platform.transform.position = new Vector2(offset, 0);
+        platform.transform.position = new Vector2(offset, -4.48f);
         offset += 30;
     }
 }
