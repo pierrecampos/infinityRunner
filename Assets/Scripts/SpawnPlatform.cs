@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPlatform : MonoBehaviour {
 
-    public List<GameObject> Platforms = new List<GameObject>();
+    public List<GameObject> platforms = new List<GameObject>();
 
     private List<Transform> currentPlatforms = new List<Transform>();
     private Transform currentPlatformPoint;
@@ -16,8 +16,8 @@ public class SpawnPlatform : MonoBehaviour {
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        for (int i = 0; i < Platforms.Count; i++) {
-            Transform p = Instantiate(Platforms[i], new Vector2(i * 30, -4.48f), transform.rotation).transform;
+        for (int i = 0; i < platforms.Count; i++) {
+            Transform p = Instantiate(platforms[i], new Vector2(i * 30, -4.48f), transform.rotation).transform;
             currentPlatforms.Add(p);
             offset += 30;
         }
@@ -28,8 +28,8 @@ public class SpawnPlatform : MonoBehaviour {
 
     void Update() {
         float distance = player.position.x - currentPlatformPoint.position.x;
-        
-        if(distance >= 1) {
+
+        if (distance >= 1) {
             Recycle(currentPlatforms[platformIndex].gameObject);
             platformIndex++;
 
