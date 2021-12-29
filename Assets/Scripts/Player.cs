@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     public float Speed;
     public float JumpForce;
     public Animator anim;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
@@ -22,6 +24,10 @@ public class Player : MonoBehaviour {
             rig.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             anim.SetBool("isJumping", true);
             isJumping = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F)) {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
     }
 
