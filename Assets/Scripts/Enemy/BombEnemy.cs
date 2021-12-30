@@ -2,18 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombEnemy : MonoBehaviour {
+public class BombEnemy : Enemy {
 
     public Transform firePoint;
     public GameObject bombPrefab;
     public float throwTime;
     private float throwCount;
-
-
-    void Start() {
-
-    }
-
 
     void Update() {
         throwCount += Time.deltaTime;

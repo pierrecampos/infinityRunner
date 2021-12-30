@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 6616180200702443396}
   - component: {fileID: 6616180200702443397}
   - component: {fileID: 6616180200702443399}
+  - component: {fileID: 2443302555128387312}
   m_Layer: 0
   m_Name: Bomb Enemy
   m_TagString: Untagged
@@ -126,6 +127,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8890a727212d7bb4abb1b9b6d247123d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+  damage: 0
   firePoint: {fileID: 6616180200024720228}
   bombPrefab: {fileID: 6460406581345528430, guid: 9038bc099867364489d0251dc401e37a, type: 3}
   throwTime: 2
+--- !u!58 &2443302555128387312
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616180200702443402}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.37
