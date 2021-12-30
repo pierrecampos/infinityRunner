@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour {
     public int damage;
 
     protected virtual void ApplyDamage(int dmg) {
-        Debug.Log(dmg);
         health -= dmg;
         if (health <= 0) {
             Destroy(gameObject);

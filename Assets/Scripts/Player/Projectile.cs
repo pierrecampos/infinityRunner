@@ -25,6 +25,8 @@ public class Projectile : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        OnHit();
+        if (collision.gameObject.layer == 6) {
+            OnHit();
+        }
     }
 }
