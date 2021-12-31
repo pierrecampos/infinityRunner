@@ -9,6 +9,7 @@ public class BombEnemy : Enemy {
     public float throwTime;
     private float throwCount;
     private Player player;
+    
 
 
     void Start() {

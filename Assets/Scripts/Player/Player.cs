@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public Animator anim;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Animator jetPack;
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour {
         if (!isJumping) {
             rig.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             anim.SetBool("isJumping", true);
+            jetPack.SetBool("Teste", true);
             isJumping = true;
         }
     }
@@ -52,6 +54,7 @@ public class Player : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.layer == 6) {
             anim.SetBool("isJumping", false);
+            jetPack.SetBool("Teste", false);
             isJumping = false;
         }
     }
