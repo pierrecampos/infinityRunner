@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xAxis: -7
   yAxis: 7
+  dmg: 5
 --- !u!50 &6460406581345528402
 Rigidbody2D:
   serializedVersion: 4

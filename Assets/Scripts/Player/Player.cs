@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     private bool isJumping;
     public float Speed;
     public float JumpForce;
+    public int health;
     public Animator anim;
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -28,6 +29,14 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.F)) {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+    }
+
+    public void OnHit(int dmg) {
+        health -= dmg;
+        if (health <= 0) {
+            health = 0;
+            GameController.instance.ShowGameOver();
         }
     }
 

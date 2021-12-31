@@ -643,6 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   JumpForce: 10
+  health: 10
   anim: {fileID: 1830098628}
   bulletPrefab: {fileID: 7261759710194572668, guid: be473342bd3a4a64cb502f53f5c084e4, type: 3}
   firePoint: {fileID: 1705665723}
@@ -743,6 +744,7 @@ Transform:
   m_Children:
   - {fileID: 200563729}
   - {fileID: 915373931}
+  - {fileID: 1350349765}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1440,13 +1442,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350349764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.519907, y: 12.849737, z: -278.4337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.519907, y: 12.849737, z: -251.43369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2051687345}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705665722
 GameObject:
