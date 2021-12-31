@@ -17,7 +17,7 @@ public class AudioController : MonoBehaviour {
         instance = this;
         audioSource = GetComponent<AudioSource>();
         auxAudioSource = gameObject.AddComponent<AudioSource>();
-        
+
     }
 
     public void Play(AudioClip clip) {
@@ -35,6 +35,11 @@ public class AudioController : MonoBehaviour {
         if (auxAudioSource.isPlaying) {
             auxAudioSource.Stop();
         }
+    }
+
+    public void MuteAll(bool mute) {
+        audioSource.mute = mute;
+        auxAudioSource.mute = mute;
     }
 
 

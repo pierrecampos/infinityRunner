@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
     public GameObject gameOverPanel;
     public GameObject ShootBtn;
     public GameObject JumpBtn;
+    public GameObject PauseBtn;
+    public GameObject pausePanel;
 
     void Start() {
         instance = this;
@@ -19,12 +21,31 @@ public class GameController : MonoBehaviour {
         gameOverPanel.SetActive(true);
         ShootBtn.SetActive(false);
         JumpBtn.SetActive(false);
+        PauseBtn.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void RestartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void PauseGame() {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+        AudioController.instance.MuteAll(true);
+    }
+
+    public void ContinueGame() {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        AudioController.instance.MuteAll(false);
+    }
+
+    public void GameMenu() {
+        SceneManager.LoadScene(0);
+    }
+
+
 
 
 }
