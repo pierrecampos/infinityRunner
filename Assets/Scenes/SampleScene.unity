@@ -902,6 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerShoot: {fileID: 8300000, guid: dd75754a775c57644ad6492ad1e9f844, type: 3}
   bombExplosion: {fileID: 8300000, guid: d61358c7ed58af447b5be891f49c40b1, type: 3}
+  jetPack: {fileID: 8300000, guid: c2bda48b8b3b2364e8ffd229591862dc, type: 3}
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0

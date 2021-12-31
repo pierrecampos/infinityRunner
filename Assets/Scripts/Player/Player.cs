@@ -35,8 +35,10 @@ public class Player : MonoBehaviour {
         if (!isJumping) {
             rig.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             anim.SetBool("isJumping", true);
-            AudioController.instance.Play(AudioController.instance.playerShoot);
+            jetPack.SetBool("JetPackEffect", true);
+            AudioController.instance.PlayLoopSound(AudioController.instance.jetPack);
             isJumping = true;
+
         }
     }
     public void OnShoot() {
@@ -54,8 +56,11 @@ public class Player : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.layer == 6) {
-            anim.SetBool("isJumping", false);             
+            anim.SetBool("isJumping", false);
+            jetPack.SetBool("JetPackEffect", false);
             isJumping = false;
+            
+            AudioController.instance.StopLoopSound();
         }
     }
 }
