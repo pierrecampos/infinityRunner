@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.layer == 6) {
-            anim.SetBool("isJumping", false);
+            anim.SetBool("isJumping", false); 
             jetPack.SetBool("Teste", false);
             isJumping = false;
         }
