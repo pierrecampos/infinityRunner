@@ -15,6 +15,10 @@ Infinity Runner é um jogo de tiro, cujo objetivo é conseguir o maior Score pos
 - Botão de Retorno ao menu
 
 ## Imagens 🗺️
+<div align="center">
+  <img src="https://github.com/pierrecampos/infinityRunner/blob/master/Img1.png" height="400px" />
+  <img src="https://github.com/pierrecampos/infinityRunner/blob/master/Img2.gif" height="400px"/>
+ </div>
 
 ## Tecnologias Utilizadas 🤖
 - Unity - Engine
