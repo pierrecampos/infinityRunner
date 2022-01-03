@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -11,10 +12,21 @@ public class GameController : MonoBehaviour {
     public GameObject JumpBtn;
     public GameObject PauseBtn;
     public GameObject pausePanel;
+    public Text score;
+
+    private int _score;
+    public int Score {
+        get => _score;
+        set => _score += value;
+    }
 
     void Start() {
         instance = this;
         Time.timeScale = 1;
+    }
+
+    void Update() {
+        score.text = "Score: " + _score.ToString();
     }
 
     public void ShowGameOver() {

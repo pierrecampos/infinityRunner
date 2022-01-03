@@ -48,5 +48,6 @@ public class SpawnPlatform : MonoBehaviour {
             platform.GetComponent<Platform>().spawnEnemy.SpawnEnemy();
         }
         offset += 30;
+        GameController.instance.Score = 100;
     }
 }

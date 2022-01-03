@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Animator jetPack;
+    public Text life;
 
     void Start() {
         rig = GetComponent<Rigidbody2D>();
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.F)) {
             OnShoot();
         }
+
+        life.text = "Life: " + health.ToString();
     }
 
     public void OnJump() {
@@ -59,7 +63,7 @@ public class Player : MonoBehaviour {
             anim.SetBool("isJumping", false);
             jetPack.SetBool("JetPackEffect", false);
             isJumping = false;
-            
+
             AudioController.instance.StopLoopSound();
         }
     }
