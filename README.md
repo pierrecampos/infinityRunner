@@ -28,6 +28,7 @@ Infinity Runner é um jogo de tiro, cujo objetivo é conseguir o maior Score pos
 - Android
 
 ## Download ⬇️
+[Releases](https://github.com/pierrecampos/infinityRunner/releases/tag/Latest)
 
 ## Créditos: 📣
 - Assets: [Plataforma Crie Seus Jogos](https://www.crieseusjogos.com.br/)
