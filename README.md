@@ -2,7 +2,7 @@
 
 Infinity Runner é um jogo de tiro, cujo objetivo é conseguir o maior Score possível.
 
-> Este jogo foi construido como base nos estudos do curso [**Crie Seus Jogos**](https://www.crieseusjogos.com.br/) - do Professor Wenes. 
+> Este jogo foi construido com base nos estudos do curso [**Crie Seus Jogos**](https://www.crieseusjogos.com.br/) - do Professor Wenes. 
 #
 ## O que adicionei a mais: 📌
 - Efeito JetPack;
